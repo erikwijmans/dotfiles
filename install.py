@@ -80,7 +80,7 @@ def main():
 
   CONFIG = "{}/.config".format(HOME)
   if not os.path.exists(CONFIG):
-    if query_yes_no("'{}' does not exists, make it?".format(dst)):
+    if query_yes_no("'{}' does not exists, make it?".format(CONFIG)):
       os.mkdir(CONFIG)
 
   if os.path.exists(CONFIG):

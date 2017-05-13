@@ -9,3 +9,4 @@ addpath () {
         export PATH="$1:$PATH"
     fi
 }
+alias qlogin='ssh wustl -t qlogin'

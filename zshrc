@@ -1,6 +1,7 @@
 # User configuration
 . ~/.zsh/antigen-hs/init.zsh
 . ~/.zsh/zsh_aliases
+alias vim='nvim'
 
 . ~/.zsh/zsh_exports
 
