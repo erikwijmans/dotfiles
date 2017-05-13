@@ -58,10 +58,14 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('scrooloose/nerdtree')
     call dein#add('myusuf3/numbers.vim')
     call dein#add('mbbill/undotree')
+    call dein#add('majutsushi/tagbar')
+
      " Motion / Indentation
     call dein#add('luochen1990/rainbow')
     call dein#add('tpope/vim-sleuth')
     call dein#add('scrooloose/nerdcommenter')
+    call dein#add('Raimondi/delimitMate')
+    call dein#add('easymotion/vim-easymotion')
 
     " Deoplete
     call dein#add('Shougo/deoplete.nvim')
@@ -84,6 +88,9 @@ if dein#load_state(g:Vimmic_BASE."dein")
     " C / CPP
     call dein#add('octol/vim-cpp-enhanced-highlight', {'on_ft':["c","cpp"]})
     call dein#add('rhysd/vim-clang-format')
+
+    " Python
+    call dein#add('nvie/vim-flake8')
 
     " Latex
     call dein#add('lervag/vimtex', {'on_ft':"tex"})

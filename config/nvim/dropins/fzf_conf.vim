@@ -70,5 +70,5 @@ command! -bang -nargs=* Rg
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
-map <Leader>f :Files<Cr>
-map <Leader>F :Ag<Cr>
+map <Leader>g :Files<Cr>
+map <Leader>G :Ag<Cr>

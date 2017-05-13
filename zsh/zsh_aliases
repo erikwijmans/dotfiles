@@ -9,4 +9,8 @@ addpath () {
         export PATH="$1:$PATH"
     fi
 }
-alias qlogin='ssh wustl -t qlogin'
+
+local_alises="./zsh_aliases.local"
+if [[ -f "${local_alises}" ]]; then
+    . ${local_alises}
+fi
