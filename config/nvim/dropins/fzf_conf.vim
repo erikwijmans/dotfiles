@@ -100,4 +100,4 @@ command! Tags call s:tags()
 
 map <Leader>g :Files<Cr>
 map <Leader>G :Ag<Cr>
-map <Leader>r :Tags<Cr>
+map <Leader>r :wa<Cr>:Tags<Cr>

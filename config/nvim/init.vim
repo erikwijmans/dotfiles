@@ -22,7 +22,7 @@ let g:Vimmic_DEIN = g:Vimmic_BASE.join(['dein','repos','github.com','Shougo','de
 " Dein first install
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:deinNeedInstall=1
+let g:deinNeedInstall=0
 if !filereadable(expand(g:Vimmic_DEIN).g:file_sep.'README.md')
     if executable('git')
         let g:deinNeedInstall=1
@@ -74,16 +74,19 @@ if dein#load_state(g:Vimmic_BASE."dein")
 
     " Deoplete
     call dein#add('Shougo/deoplete.nvim')
-    call dein#add('Shougo/deol.nvim')
-    call dein#add('Shougo/denite.nvim')
-    call dein#add('Shougo/neomru.vim')
-    call dein#add('Shougo/context_filetype.vim')
-    call dein#add('Shougo/neosnippet.vim')
-    call dein#add('Shougo/neosnippet-snippets')
+    " call dein#add('Shougo/deol.nvim')
+    " call dein#add('Shougo/denite.nvim')
+    " call dein#add('Shougo/neomru.vim')
+    " call dein#add('Shougo/context_filetype.vim')
+    " call dein#add('Shougo/neosnippet.vim')
+    " call dein#add('Shougo/neosnippet-snippets')
+    call dein#add('Shougo/neoinclude.vim')
 
     " Langs
     call dein#add('zchee/deoplete-clang')
     call dein#add('zchee/deoplete-jedi')
+    " Neomake
+    call dein#add('neomake/neomake')
 
     " lib needed by nerdtree & others
     call dein#add('tomtom/tlib_vim')
@@ -132,7 +135,9 @@ endif
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   au BufWritePre * %s/\s\+$//e
+  au FocusLost * silent! wa
 endif
+set autowrite
 
 " Leader key
 if !exists("mapleader")
