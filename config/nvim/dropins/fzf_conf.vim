@@ -70,5 +70,34 @@ command! -bang -nargs=* Rg
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
+" Way to more inteligentlly display tags
+function! s:tags_sink(line)
+  let parts = split(a:line, '\t\zs')
+  let excmd = matchstr(parts[2:], '^.*\ze;"\t')
+  execute 'silent e' parts[1][:-2]
+  let [magic, &magic] = [&magic, 0]
+  execute excmd
+  let &magic = magic
+endfunction
+
+function! s:tags()
+  if !filereadable(g:easytags_file)
+    echohl WarningMsg
+    echom 'Preparing tags'
+    echohl None
+    call system(g:fzf_tags_command)
+  endif
+
+  call fzf#run({
+  \ 'source':  'cat '.g:easytags_file.
+  \            '| grep -v -a ^!',
+  \ 'options': '+m -d "\t" --with-nth 1,4.. -n 1 --tiebreak=index',
+  \ 'down':      '60%',
+  \ 'sink':    function('s:tags_sink')})
+endfunction
+
+command! Tags call s:tags()
+
 map <Leader>g :Files<Cr>
 map <Leader>G :Ag<Cr>
+map <Leader>r :Tags<Cr>

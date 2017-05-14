@@ -55,10 +55,15 @@ if dein#load_state(g:Vimmic_BASE."dein")
 
     " GUI
     call dein#add('vim-airline/vim-airline')
+    call dein#add('vim-airline/vim-airline-themes')
     call dein#add('scrooloose/nerdtree')
     call dein#add('myusuf3/numbers.vim')
     call dein#add('mbbill/undotree')
     call dein#add('majutsushi/tagbar')
+    call dein#add('xolox/vim-easytags')
+    call dein#add('xolox/vim-misc')
+
+    call dein#add('embear/vim-localvimrc')
 
      " Motion / Indentation
     call dein#add('luochen1990/rainbow')
@@ -101,6 +106,10 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('junegunn/fzf', { 'build': './install --bin' })
     call dein#add('junegunn/fzf.vim')
 
+    " Theme
+    call dein#local('~/.config/nvim/themes')
+    call dein#add('mhartington/oceanic-next')
+
     call dein#end()
     call dein#save_state()
 endif
@@ -142,3 +151,12 @@ endif
 for dropin in split(glob(g:Vimmic_CONFIG_DROPINS."*"), '\n') " is \n ok on Windows ?
     execute 'source' dropin
 endfor
+
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" Theme
+syntax enable
+colorscheme OceanicNext
+

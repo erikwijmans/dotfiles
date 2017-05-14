@@ -41,5 +41,6 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 
 
 " Theme
+let g:airline_theme='oceanicnext'
 """""""
 " None
