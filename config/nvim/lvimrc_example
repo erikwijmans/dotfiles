@@ -1,0 +1,5 @@
+let g:proj_dir = fnamemodify(expand('<sfile>'), ':p:h:gs')
+let g:easytags_file = g:proj_dir.g:file_sep.".vimtags"
+let g:fzf_tags_command = '/usr/local/bin/ctags -R -f '.g:easytags_file.' '.g:proj_dir
+
+let g:neomake_cpp_clang_maker.args += ['-I'.g:proj_dir]

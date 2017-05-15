@@ -6,12 +6,12 @@
 set laststatus=2                                                        " appear on first tab
 let g:Powerline_symbols                          = 'fancy'              " theme setting
 let g:airline#extensions#tabline#enabled         = 1                    " tab bar at the top
-let g:airline#extensions#tabline#buffer_idx_mode = 1                    " tabs navigation enabled
+let g:airline#extensions#tabline#buffer_idx_mode = 0                        " tabs navigation enabled
 let g:airline#extensions#tabline#fnamemod        = ':t'
 let g:airline#extensions#tabline#show_tab_nr     = 1
 let g:airline#extensions#tabline#formatter       = 'unique_tail'        " tab display only name
 let g:airline#extensions#tagbar#enabled          = 1                    " link with tagbar
-let g:airline#extensions#syntastic#enabled       = 1                    " link with syntastic
+" let g:airline#extensions#syntastic#enabled       = 1                    " link with syntastic
 let g:airline#extensions#undotree#enabled        = 1                    " link with undotree
 
 if !exists('g:airline_symbols')

@@ -74,12 +74,12 @@ if dein#load_state(g:Vimmic_BASE."dein")
 
     " Deoplete
     call dein#add('Shougo/deoplete.nvim')
-    " call dein#add('Shougo/deol.nvim')
-    " call dein#add('Shougo/denite.nvim')
-    " call dein#add('Shougo/neomru.vim')
-    " call dein#add('Shougo/context_filetype.vim')
-    " call dein#add('Shougo/neosnippet.vim')
-    " call dein#add('Shougo/neosnippet-snippets')
+    call dein#add('Shougo/deol.nvim')
+    call dein#add('Shougo/denite.nvim')
+    call dein#add('Shougo/neomru.vim')
+    call dein#add('Shougo/context_filetype.vim')
+    call dein#add('Shougo/neosnippet.vim')
+    call dein#add('Shougo/neosnippet-snippets')
     call dein#add('Shougo/neoinclude.vim')
 
     " Langs
@@ -110,7 +110,6 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('junegunn/fzf.vim')
 
     " Theme
-    call dein#local('~/.config/nvim/themes')
     call dein#add('mhartington/oceanic-next')
 
     call dein#end()
@@ -119,7 +118,7 @@ endif
 
 " Required:
 filetype plugin indent on
-
+let $FZF_DEFAULT_COMMAND='ag --nogroup --column --nocolor --filename-pattern ""'
 " If you want to install not installed plugins on startup.
 if g:deinNeedInstall
     if dein#check_install()
@@ -143,7 +142,8 @@ set autowrite
 if !exists("mapleader")
     let mapleader=" "                      " Leader key is `,`.
 endif
-
+map <Leader>t :tabnew<Cr>
+map <Leader>q :x<Cr>
 "}}}"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Module and environment configuration                                      {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -163,5 +163,5 @@ endif
 
 " Theme
 syntax enable
-colorscheme OceanicNext
+colorscheme Bittersweet
 

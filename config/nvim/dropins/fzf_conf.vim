@@ -1,3 +1,4 @@
+let g:fzf_nvim_statusline = 1
 " This is the default extra key bindings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
@@ -92,7 +93,6 @@ function! s:tags()
   \ 'source':  'cat '.g:easytags_file.
   \            '| grep -v -a ^!',
   \ 'options': '+m -d "\t" --with-nth 1,4.. -n 1 --tiebreak=index',
-  \ 'down':      '60%',
   \ 'sink':    function('s:tags_sink')})
 endfunction
 
@@ -100,4 +100,5 @@ command! Tags call s:tags()
 
 map <Leader>g :Files<Cr>
 map <Leader>G :Ag<Cr>
-map <Leader>r :wa<Cr>:Tags<Cr>
+map <Leader>R :wa<Cr>:Tags<Cr>
+map <Leader>r :wa<Cr>:BTags<Cr>
