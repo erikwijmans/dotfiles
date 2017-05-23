@@ -22,7 +22,7 @@ let g:Vimmic_DEIN = g:Vimmic_BASE.join(['dein','repos','github.com','Shougo','de
 " Dein first install
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:deinNeedInstall=0
+let g:deinNeedInstall=1
 if !filereadable(expand(g:Vimmic_DEIN).g:file_sep.'README.md')
     if executable('git')
         let g:deinNeedInstall=1
@@ -103,6 +103,7 @@ if dein#load_state(g:Vimmic_BASE."dein")
     " Latex
     call dein#add('lervag/vimtex', {'on_ft':"tex"})
     " Markdown
+    call dein#add('godlygeek/tabular')
     call dein#add('plasticboy/vim-markdown', {'on_ft':["markdown"]})
 
     " FZF
@@ -119,6 +120,7 @@ endif
 " Required:
 filetype plugin indent on
 let $FZF_DEFAULT_COMMAND='ag --nogroup --column --nocolor --filename-pattern ""'
+
 " If you want to install not installed plugins on startup.
 if g:deinNeedInstall
     if dein#check_install()
@@ -133,17 +135,18 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-  au BufWritePre * %s/\s\+$//e
-  au FocusLost * silent! wa
+  au BufWritePre * %s/\s\+$//e " Trim trailing whitespace
+  au FocusLost * silent! wa " Save on focus loss
 endif
-set autowrite
+set autowrite " Save on buffer switch
 
 " Leader key
 if !exists("mapleader")
     let mapleader=" "                      " Leader key is `,`.
 endif
-map <Leader>t :tabnew<Cr>
-map <Leader>q :x<Cr>
+nmap <Leader>t :enew<Cr>
+nmap <Leader>Q :x<Cr>
+nmap <Leader>q :up<bar>bd<Cr>
 "}}}"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Module and environment configuration                                      {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

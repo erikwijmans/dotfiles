@@ -98,7 +98,7 @@ endfunction
 
 command! Tags call s:tags()
 
-map <Leader>g :Files<Cr>
-map <Leader>G :Ag<Cr>
-map <Leader>R :wa<Cr>:Tags<Cr>
-map <Leader>r :wa<Cr>:BTags<Cr>
+nmap <Leader>g :Files<Cr>
+nmap <Leader>G :Ag<Cr>
+nmap <Leader>R :Tags<Cr>
+nmap <Leader>r :BTags<Cr>
