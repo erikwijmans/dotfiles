@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+ignores = ['config', 'README.md',  'install.py']
+
 class bcolors:
   HEADER = '\033[95m'
   OKBLUE = '\033[94m'
@@ -69,7 +71,7 @@ def attemp_link(src, dst):
 def main():
   HOME = os.environ['HOME']
   for f in glob("{}/*".format(os.getcwd())):
-    if f.split("/")[-1] in ["config", "install.py"]:
+    if f.split("/")[-1] in ignores:
       continue
 
     src = f
