@@ -1,7 +1,7 @@
 ## Dependencies
 1. Zsh
 
-        sudo apt-get install ghc cabal-install
+        sudo apt-get install ghc cabal-install zsh
 
 2. Neovim
 
@@ -10,7 +10,7 @@
         gem install neovim
         pip3 install neovim
 
-## Instalation
+## Installation
 
     git clone --recursive https://github.com/erikwijmans/dotfiles.git ~/dotfiles
     cd ~/dotfiles
