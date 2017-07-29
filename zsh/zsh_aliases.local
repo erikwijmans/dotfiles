@@ -1,0 +1,1 @@
+alias qlogin="ssh wustl -t qlogin"

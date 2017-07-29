@@ -100,6 +100,9 @@ if dein#load_state(g:Vimmic_BASE."dein")
     " Python
     call dein#add('nvie/vim-flake8')
 
+    " TS
+    call dein#add('leafgarland/typescript-vim')
+
     " Latex
     call dein#add('lervag/vimtex', {'on_ft':"tex"})
     " Markdown
@@ -137,16 +140,22 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   au BufWritePre * %s/\s\+$//e " Trim trailing whitespace
   au FocusLost * silent! wa " Save on focus loss
+  au InsertLeave * silent! set notimeout <bar> set ttimeout
+  au InsertEnter * silent! set timeout <bar> set nottimeout
 endif
 set autowrite " Save on buffer switch
+set notimeout
+set ttimeout
 
 " Leader key
 if !exists("mapleader")
-    let mapleader=" "                      " Leader key is `,`.
+    let mapleader=" "                      " Leader key is <SPACE>.
 endif
-nmap <Leader>t :enew<Cr>
-nmap <Leader>Q :x<Cr>
-nmap <Leader>q :up<bar>bd<Cr>
+nmap <silent> <Leader>t :enew<Cr>
+nmap <silent> <Leader>Q :x<Cr>
+nmap <silent> <Leader>q :up<bar>bd<Cr>
+imap jk <Esc>
+
 "}}}"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Module and environment configuration                                      {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
