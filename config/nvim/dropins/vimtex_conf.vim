@@ -14,3 +14,4 @@ let g:deoplete#omni#input_patterns.tex = '\\(?:'
       \ . '|documentclass(\s*\[[^]]*\])?\s*\{[^}]*'
       \ .')'
 let g:vimtex_view_method = 'skim'
+

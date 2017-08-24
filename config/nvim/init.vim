@@ -71,6 +71,7 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('scrooloose/nerdcommenter')
     call dein#add('Raimondi/delimitMate')
     call dein#add('easymotion/vim-easymotion')
+    call dein#add('terryma/vim-smooth-scroll')
 
     " Deoplete
     call dein#add('Shougo/deoplete.nvim')
