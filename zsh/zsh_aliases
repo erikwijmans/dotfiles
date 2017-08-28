@@ -2,6 +2,7 @@ alias grep='grep --color=auto'
 alias ls='ls -G'
 alias cp='cp -v'
 alias mv='mv -v'
+alias vim='nvim'
 
 addpath () {
     if [[ -d "$1" ]] &&  [[ ":$PATH:" != *":$1:"* ]]
