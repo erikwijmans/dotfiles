@@ -11,7 +11,7 @@ addpath () {
     fi
 }
 
-local_alises="./zsh_aliases.local"
-if [[ -f "${local_alises}" ]]; then
+local_alises="${HOME}/.zsh/zsh_aliases.local"
+if [[ -f ${local_alises} ]]; then
     . ${local_alises}
 fi

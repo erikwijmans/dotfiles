@@ -1,8 +1,7 @@
 
 
 
-
-local_exports='./zsh_exports.local'
+local_exports="${HOME}/.zsh/zsh_exports.local"
 if [[ -f ${local_exports} ]]; then
 	. ${local_exports}
 fi
