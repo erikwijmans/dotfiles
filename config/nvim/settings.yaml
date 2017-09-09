@@ -383,8 +383,8 @@ modifyLineBreaks:
     preserveBlankLines: 1
     condenseMultipleBlankLinesInto: 1
     textWrapOptions:
-        columns: 0
-        separator: ""
+        columns: 120
+        separator: "\n"
     removeParagraphLineBreaks:
         all: 0
         alignAtAmpersandTakesPriority: 1
@@ -408,10 +408,10 @@ modifyLineBreaks:
             filecontents: 0
             comments: 0
     environments:
-        BeginStartsOnOwnLine: 0
-        BodyStartsOnOwnLine: 0
-        EndStartsOnOwnLine: 0
-        EndFinishesWithLineBreak: 0
+        BeginStartsOnOwnLine: 1
+        BodyStartsOnOwnLine: 1
+        EndStartsOnOwnLine: 1
+        EndFinishesWithLineBreak: 1
         equation*:
             BeginStartsOnOwnLine: 0
             BodyStartsOnOwnLine: 0
@@ -449,8 +449,8 @@ modifyLineBreaks:
         EqualsStartsOnOwnLine: 0
         EqualsFinishesWithLineBreak: 0
     items:
-        ItemStartsOnOwnLine: 0
-        ItemFinishesWithLineBreak: 0
+        ItemStartsOnOwnLine: 1
+        ItemFinishesWithLineBreak: 1
     namedGroupingBracesBrackets:
         NameStartsOnOwnLine: 0
         NameFinishesWithLineBreak: 0

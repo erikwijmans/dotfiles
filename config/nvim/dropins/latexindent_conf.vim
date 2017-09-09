@@ -5,7 +5,7 @@ function s:latex_formater()
   let b:winview = winsaveview()
   let s:tmp_name = tempname().'.tex'
   silent execute 'write' s:tmp_name
-  silent execute "!".s:script." -s -l " . s:settings . " -w " . s:tmp_name
+  silent execute "!".s:script." -m -s -l " . s:settings . " -w " . s:tmp_name
   silent execute "%!cat " . s:tmp_name
   call winrestview(b:winview)
 endfunction
