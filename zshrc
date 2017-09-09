@@ -74,3 +74,4 @@ setopt share_history # share command history data
 
 
 true
+

@@ -105,7 +105,8 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('leafgarland/typescript-vim')
 
     " Latex
-    call dein#add('lervag/vimtex', {'on_ft':"tex"})
+    " call dein#add('lervag/vimtex', {'on_ft':"tex"})
+    call dein#add('donRaphaco/neotex', {'on_ft': "tex"})
     " Markdown
     call dein#add('godlygeek/tabular')
     call dein#add('plasticboy/vim-markdown', {'on_ft':["markdown"]})
@@ -170,11 +171,12 @@ for dropin in split(glob(g:Vimmic_CONFIG_DROPINS."*"), '\n') " is \n ok on Windo
     execute 'source' dropin
 endfor
 
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 if (has("termguicolors"))
  set termguicolors
 endif
 
 " Theme
 syntax enable
-colorscheme Bittersweet
+colorscheme OceanicNext
 
