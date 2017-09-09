@@ -100,6 +100,8 @@ if dein#load_state(g:Vimmic_BASE."dein")
 
     " Python
     call dein#add('nvie/vim-flake8')
+    " call dein#add('hdima/python-syntax')
+    call dein#add('kh3phr3n/python-syntax')
 
     " TS
     call dein#add('leafgarland/typescript-vim')
@@ -117,6 +119,7 @@ if dein#load_state(g:Vimmic_BASE."dein")
 
     " Theme
     call dein#add('mhartington/oceanic-next')
+    call dein#add('rafi/awesome-vim-colorschemes')
 
     call dein#end()
     call dein#save_state()
@@ -178,5 +181,6 @@ endif
 
 " Theme
 syntax enable
-colorscheme OceanicNext
+colorscheme solarized8_dark
 
+let python_highlight_all = 1
