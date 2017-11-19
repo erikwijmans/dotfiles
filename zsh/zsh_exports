@@ -1,4 +1,4 @@
-
+export EDITOR=nvim
 
 
 local_exports="${HOME}/.zsh/zsh_exports.local"
