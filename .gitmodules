@@ -7,3 +7,6 @@
 [submodule "config/nvim/latexindent.pl"]
 	path = config/nvim/latexindent.pl
 	url = https://github.com/cmhughes/latexindent.pl
+[submodule "zsh/antigen"]
+	path = zsh/antigen
+	url = https://github.com/zsh-users/antigen
