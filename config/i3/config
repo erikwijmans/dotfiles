@@ -192,8 +192,8 @@ bar {
               urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
       }
 }
-exec_always --no-startup-id feh --bg-scale /home/erik/Pictures/Wallpapers/Cortex-Wallpaper.png
-exec xrandr --output VGA-1 --auto --left-of HDMI-1
+
+exec_always --no-startup-id feh --bg-scale /home/erikwijmans/Pictures/Cortex-Wallpaper.png
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
@@ -203,10 +203,11 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym $mod+l exec /home/erik/.config/i3/lock.sh
-exec xautolock -time 15 -locker "/home/erik/.config/i3/lock.sh"
+set $lk_command = "i3lock -d -i /home/erikwijmans/Pictures/Cortex-Wallpaper.png -I 60"
+bindsym $mod+l exec $lk_command
+exec xautolock -time 15 -locker $lk_command
 
 bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 450 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
 exec compton -f
+exec xrandr --output DVI-D-0 --auto --right-of HDMI-0 --rotate left --output HDMI-0 --auto
 
-exec xmodmap ~/.config/xmodmap/config

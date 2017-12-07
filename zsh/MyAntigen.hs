@@ -22,6 +22,7 @@ bundles =
   , bundle "frmendes/geometry"
   , bundle "Tarrasch/zsh-command-not-found"
   , bundle "Tarrasch/zsh-mcd"
+  , bundle "Tarrasch/zsh-autoenv"
 
   -- If you use a plugin that doesn't have a *.plugin.zsh file. You can set a
   -- more liberal sourcing strategy.

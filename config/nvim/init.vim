@@ -84,8 +84,9 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('Shougo/neoinclude.vim')
 
     " Langs
-    call dein#add('zchee/deoplete-clang')
+    " call dein#add('zchee/deoplete-clang')
     call dein#add('zchee/deoplete-jedi')
+    call dein#add('tweekmonster/deoplete-clang2')
     " Neomake
     call dein#add('neomake/neomake')
 
@@ -102,6 +103,7 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('nvie/vim-flake8')
     " call dein#add('hdima/python-syntax')
     call dein#add('kh3phr3n/python-syntax')
+    call dein#add('mindriot101/vim-yapf')
 
     " TS
     call dein#add('leafgarland/typescript-vim')
@@ -127,7 +129,7 @@ endif
 
 " Required:
 filetype plugin indent on
-let $FZF_DEFAULT_COMMAND='ag --nogroup --column --nocolor --filename-pattern ""'
+let $FZF_DEFAULT_COMMAND='ag --nogroup --column --nocolor -g ""'
 
 " If you want to install not installed plugins on startup.
 if g:deinNeedInstall
@@ -186,3 +188,8 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 let python_highlight_all = 1
+
+
+let g:python3_host_prog="/home/erikwijmans/miniconda3/envs/neovim3/bin/python"
+let g:python_host_prog="/home/erikwijmans/miniconda3/envs/neovim2/bin/python"
+

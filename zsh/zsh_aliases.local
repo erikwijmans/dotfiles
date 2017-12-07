@@ -1,1 +1,4 @@
 alias qlogin="ssh wustl -t qlogin"
+function date_and_time () {
+	echo $(date +%y-%m-%d_%H:%M:%S)
+}
