@@ -1,5 +1,5 @@
 # User configuration
-. ~/.zsh/antigen-hs/init.zsh
+. ~/.zsh/init_plugin_manager.zsh
 . ~/.zsh/zsh_aliases
 . ~/.zsh/zsh_exports
 
