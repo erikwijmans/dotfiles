@@ -183,7 +183,8 @@ endif
 
 " Theme
 syntax enable
-colorscheme solarized8_dark
+set background=dark
+colorscheme solarized8
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
@@ -192,4 +193,6 @@ let python_highlight_all = 1
 
 let g:python3_host_prog="/home/erikwijmans/miniconda3/envs/neovim3/bin/python"
 let g:python_host_prog="/home/erikwijmans/miniconda3/envs/neovim2/bin/python"
+
+set tabstop=4 shiftwidth=4 expandtab smarttab
 
