@@ -11,5 +11,6 @@ else
 	antigen bundle frmendes/geometry
 	antigen bundle Tarrasch/zsh-command-not-found
 	antigen bundle Tarrasch/zsh-mcd
+        antigen bundle Tarrasch/zsh-autoenv
 	antigen apply
 fi
