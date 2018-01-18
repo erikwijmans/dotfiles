@@ -98,6 +98,7 @@ if dein#load_state(g:Vimmic_BASE."dein")
     " C / CPP
     call dein#add('octol/vim-cpp-enhanced-highlight', {'on_ft':["c","cpp"]})
     call dein#add('rhysd/vim-clang-format')
+    call dein#add('arakashic/chromatica.nvim')
 
     " Python
     call dein#add('nvie/vim-flake8')
@@ -122,6 +123,9 @@ if dein#load_state(g:Vimmic_BASE."dein")
     " Theme
     call dein#add('mhartington/oceanic-next')
     call dein#add('rafi/awesome-vim-colorschemes')
+
+    " CMake
+    call dein#add('pboettch/vim-cmake-syntax')
 
     call dein#end()
     call dein#save_state()
@@ -193,4 +197,6 @@ let python_highlight_all = 1
 
 let g:python3_host_prog="/nethome/ewijmans3/miniconda3/envs/neovim3/bin/python"
 let g:python_host_prog="/nethome/ewijmans3/miniconda3/envs/neovim2/bin/python"
+
+set tabstop=4 shiftwidth=4 expandtab smarttab
 
