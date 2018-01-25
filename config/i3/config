@@ -203,7 +203,7 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-set $lk_command = "i3lock -d -i /home/erikwijmans/Pictures/Cortex-Wallpaper.png -I 60"
+set $lk_command "i3lock -d -i /home/erikwijmans/Pictures/Cortex-Wallpaper.png -I 60"
 bindsym $mod+l exec $lk_command
 exec xautolock -time 15 -locker $lk_command
 

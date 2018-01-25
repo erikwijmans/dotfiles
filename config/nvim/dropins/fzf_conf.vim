@@ -1,3 +1,5 @@
+let $FZF_DEFAULT_COMMAND='ag --vimgrep -g ""'
+
 let g:fzf_nvim_statusline = 1
 " This is the default extra key bindings
 let g:fzf_action = {

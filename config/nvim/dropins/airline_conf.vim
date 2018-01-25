@@ -13,6 +13,7 @@ let g:airline#extensions#tabline#formatter       = 'unique_tail'        " tab di
 let g:airline#extensions#tagbar#enabled          = 1                    " link with tagbar
 " let g:airline#extensions#syntastic#enabled       = 1                    " link with syntastic
 let g:airline#extensions#undotree#enabled        = 1                    " link with undotree
+let g:airline#extensions#whitespace#mixed_indent_algo = 1
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
