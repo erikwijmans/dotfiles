@@ -133,7 +133,7 @@ endif
 
 " Required:
 filetype plugin indent on
-let $FZF_DEFAULT_COMMAND='ag --nogroup --column --nocolor -g ""'
+
 
 " If you want to install not installed plugins on startup.
 if g:deinNeedInstall
