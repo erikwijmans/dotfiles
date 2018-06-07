@@ -1,5 +1,6 @@
 cabal.sandbox.config
 .cabal-sandbox
 *.local
-zsh_aliases.local
-zsh_exports.local
+zsh/zsh_aliases.local
+zsh/zsh_exports.local
+tmux/resurrect

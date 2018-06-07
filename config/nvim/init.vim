@@ -73,20 +73,21 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('easymotion/vim-easymotion')
     call dein#add('terryma/vim-smooth-scroll')
 
+    call dein#add('Valloric/YouCompleteMe', {'merged': 0})
     " Deoplete
-    call dein#add('Shougo/deoplete.nvim')
-    call dein#add('Shougo/deol.nvim')
+    " call dein#add('Shougo/deoplete.nvim')
+    " call dein#add('Shougo/deol.nvim')
     call dein#add('Shougo/denite.nvim')
     call dein#add('Shougo/neomru.vim')
     call dein#add('Shougo/context_filetype.vim')
-    call dein#add('Shougo/neosnippet.vim')
-    call dein#add('Shougo/neosnippet-snippets')
+    " call dein#add('Shougo/neosnippet.vim')
+    " call dein#add('Shougo/neosnippet-snippets')
     call dein#add('Shougo/neoinclude.vim')
 
     " Langs
     " call dein#add('zchee/deoplete-clang')
-    call dein#add('zchee/deoplete-jedi')
-    call dein#add('tweekmonster/deoplete-clang2')
+    " call dein#add('zchee/deoplete-jedi')
+    " call dein#add('tweekmonster/deoplete-clang2')
     " Neomake
     call dein#add('neomake/neomake')
 
@@ -98,7 +99,7 @@ if dein#load_state(g:Vimmic_BASE."dein")
     " C / CPP
     call dein#add('octol/vim-cpp-enhanced-highlight', {'on_ft':["c","cpp"]})
     call dein#add('rhysd/vim-clang-format')
-    call dein#add('arakashic/chromatica.nvim')
+    " call dein#add('arakashic/chromatica.nvim')
 
     " Python
     call dein#add('nvie/vim-flake8')
@@ -195,8 +196,9 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let python_highlight_all = 1
 
 
-let g:python3_host_prog="/Users/erikwijmans/anaconda3/envs/neovim3/bin/python"
-let g:python_host_prog="/Users/erikwijmans/anaconda3/envs/neovim2/bin/python"
+let g:miniconda_path="/home/erikwijmans/miniconda3"
+let g:python3_host_prog=g:miniconda_path.g:file_sep."envs/neovim3/bin/python"
+let g:python_host_prog=g:miniconda_path.g:file_sep."envs/neovim2/bin/python"
 
 set tabstop=4 shiftwidth=4 expandtab smarttab
 
