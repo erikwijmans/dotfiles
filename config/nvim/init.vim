@@ -79,8 +79,8 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('Shougo/denite.nvim')
     call dein#add('Shougo/neomru.vim')
     call dein#add('Shougo/context_filetype.vim')
-    call dein#add('Shougo/neosnippet.vim')
-    call dein#add('Shougo/neosnippet-snippets')
+    " call dein#add('Shougo/neosnippet.vim')
+    " call dein#add('Shougo/neosnippet-snippets')
     call dein#add('Shougo/neoinclude.vim')
 
     " Langs
@@ -195,8 +195,9 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let python_highlight_all = 1
 
 
-let g:python3_host_prog="/Users/erikwijmans/anaconda3/envs/neovim3/bin/python"
-let g:python_host_prog="/Users/erikwijmans/anaconda3/envs/neovim2/bin/python"
+let g:conda_dir="/private/home/erikwijmans/.conda/"
+let g:python3_host_prog=g:conda_dir."envs/neovim3/bin/python"
+let g:python_host_prog=g:conda_dir."envs/neovim2/bin/python"
 
 set tabstop=4 shiftwidth=4 expandtab smarttab
 
