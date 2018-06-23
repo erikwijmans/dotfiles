@@ -1,5 +1,0 @@
-alias qlogin="ssh wustl -t qlogin"
-alias ls='ls --color=auto'
-function date_and_time () {
-	echo $(date +%y-%m-%d_%H:%M:%S)
-}
