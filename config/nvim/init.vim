@@ -124,6 +124,7 @@ if dein#load_state(g:Vimmic_BASE."dein")
     " Theme
     call dein#add('mhartington/oceanic-next')
     call dein#add('rafi/awesome-vim-colorschemes')
+    call dein#add('dracula/vim')
 
     " CMake
     call dein#add('pboettch/vim-cmake-syntax')
@@ -188,8 +189,9 @@ endif
 
 " Theme
 syntax enable
-set background=dark
-colorscheme solarized8
+" set background=dark
+" colorscheme solarized8
+colorscheme dracula
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
