@@ -124,6 +124,7 @@ if dein#load_state(g:Vimmic_BASE."dein")
     " Theme
     call dein#add('mhartington/oceanic-next')
     call dein#add('rafi/awesome-vim-colorschemes')
+    call dein#add('dracula/vim')
 
     " CMake
     call dein#add('pboettch/vim-cmake-syntax')
@@ -188,15 +189,16 @@ endif
 
 " Theme
 syntax enable
-set background=dark
-colorscheme solarized8
+" set background=dark
+" colorscheme solarized8
+colorscheme dracula
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 let python_highlight_all = 1
 
 
-let g:miniconda_path="/home/erikwijmans/miniconda3"
+let g:miniconda_path="/Users/erikwijmans/miniconda3"
 let g:python3_host_prog=g:miniconda_path.g:file_sep."envs/neovim3/bin/python"
 let g:python_host_prog=g:miniconda_path.g:file_sep."envs/neovim2/bin/python"
 
