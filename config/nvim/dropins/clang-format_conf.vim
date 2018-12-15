@@ -1,7 +1,7 @@
 let g:clang_format#code_style="llvm"
 let g:clang_format#style_options = {
                 \ "IndentWidth": 4}
-autocmd FileType c,cpp,cu ClangFormatAutoEnable
+" autocmd FileType c,cpp,cu ClangFormatAutoEnable
 " map to <Leader>cf in C++ code
 autocmd FileType c,cpp,objc,cuda nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc,cuda vnoremap <buffer><Leader>cf :ClangFormat<CR>

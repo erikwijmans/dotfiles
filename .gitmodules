@@ -16,3 +16,6 @@
 [submodule "iterm"]
 	path = iterm
 	url = https://github.com/dracula/iterm.git
+[submodule "ccls"]
+	path = ccls
+	url = https://github.com/MaskRay/ccls

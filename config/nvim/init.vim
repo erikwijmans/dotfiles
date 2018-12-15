@@ -73,7 +73,9 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('easymotion/vim-easymotion')
     call dein#add('terryma/vim-smooth-scroll')
 
-    call dein#add('Valloric/YouCompleteMe', {'merged': 0})
+    " call dein#add('Valloric/YouCompleteMe', {'merged': 0})
+    call dein#add('neoclide/coc.nvim')
+
     " Deoplete
     " call dein#add('Shougo/deoplete.nvim')
     " call dein#add('Shougo/deol.nvim')
