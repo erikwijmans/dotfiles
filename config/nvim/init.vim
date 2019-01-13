@@ -36,6 +36,8 @@ if !filereadable(expand(g:Vimmic_DEIN).g:file_sep.'README.md')
 
 endif
 
+let g:ale_completion_enabled = 1
+
 "}}}"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin import                                                             {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -74,7 +76,8 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('terryma/vim-smooth-scroll')
 
     " call dein#add('Valloric/YouCompleteMe', {'merged': 0})
-    call dein#add('neoclide/coc.nvim')
+    " call dein#add('neoclide/coc.nvim')
+    call dein#add('w0rp/ale')
 
     " Deoplete
     " call dein#add('Shougo/deoplete.nvim')
@@ -153,7 +156,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-  au BufWritePre * %s/\s\+$//e " Trim trailing whitespace
+  " au BufWritePre * %s/\s\+$//e " Trim trailing whitespace
   au FocusLost * silent! wa " Save on focus loss
   au InsertLeave * silent! set notimeout <bar> set ttimeout
   au InsertEnter * silent! set timeout <bar> set nottimeout
