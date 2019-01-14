@@ -10,7 +10,7 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 
 
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gg <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)

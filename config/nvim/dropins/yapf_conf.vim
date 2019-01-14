@@ -8,3 +8,5 @@ let g:yapf_style = "'{based_on_style: google,
             \ split_before_expression_after_opening_paren=True
             \ split_before_first_argument=True}'"
 
+let g:yapf_style = "'{based_on_style: google}'"
+
