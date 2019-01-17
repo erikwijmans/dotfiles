@@ -19,3 +19,6 @@
 [submodule "ccls"]
 	path = ccls
 	url = https://github.com/MaskRay/ccls
+[submodule "cquery"]
+	path = cquery
+	url = https://github.com/cquery-project/cquery.git

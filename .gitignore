@@ -4,3 +4,4 @@ cabal.sandbox.config
 zsh/zsh_aliases.local
 zsh/zsh_exports.local
 tmux/resurrect
+*.zwc
