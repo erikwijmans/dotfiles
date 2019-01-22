@@ -4,15 +4,16 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
-" inoremap <silent><expr> <TAB>
-      " \ pumvisible() ? "\<C-n>" :
-      " \ <SID>check_back_space() ? "\<TAB>" :
-      " \ coc#refresh()
+autocmd FileType c,cpp,objc,cuda inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
 
 
 " autocmd CursorHold * silent call CocActionAsync('highlight')
-" nmap <silent> gd <Plug>(coc-definition)
-" nmap <silent> gg <Plug>(coc-definition)
-" nmap <silent> gy <Plug>(coc-type-definition)
-" nmap <silent> gi <Plug>(coc-implementation)
-" nmap <silent> gr <Plug>(coc-references)
+autocmd FileType c,cpp,objc,cuda nmap <silent> gd <Plug>(coc-definition)
+autocmd FileType c,cpp,objc,cuda nmap <silent> gg <Plug>(coc-definition)
+autocmd FileType c,cpp,objc,cuda nmap <silent> dg <Plug>(coc-definition)
+autocmd FileType c,cpp,objc,cuda nmap <silent> gy <Plug>(coc-type-definition)
+autocmd FileType c,cpp,objc,cuda nmap <silent> gi <Plug>(coc-implementation)
+autocmd FileType c,cpp,objc,cuda nmap <silent> gr <Plug>(coc-references)

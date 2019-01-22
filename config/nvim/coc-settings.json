@@ -4,6 +4,7 @@
       "command": "/private/home/erikwijmans/dotfiles/ccls/Release/ccls",
       "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
       "initializationOptions": {
+        "cacheDirectory": "/tmp/ccls"
       }
     }
   }
