@@ -110,7 +110,8 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('nvie/vim-flake8')
     " call dein#add('hdima/python-syntax')
     call dein#add('kh3phr3n/python-syntax')
-    call dein#add('mindriot101/vim-yapf')
+    " call dein#add('mindriot101/vim-yapf')
+    call dein#add('ambv/black')
 
     " TS
     call dein#add('leafgarland/typescript-vim')
