@@ -17,3 +17,6 @@ autocmd FileType c,cpp,objc,cuda nmap <silent> dg <Plug>(coc-definition)
 autocmd FileType c,cpp,objc,cuda nmap <silent> gy <Plug>(coc-type-definition)
 autocmd FileType c,cpp,objc,cuda nmap <silent> gi <Plug>(coc-implementation)
 autocmd FileType c,cpp,objc,cuda nmap <silent> gr <Plug>(coc-references)
+
+let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
+let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'

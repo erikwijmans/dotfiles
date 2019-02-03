@@ -203,7 +203,7 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let python_highlight_all = 1
 
 
-let g:conda_dir="/private/home/erikwijmans/.conda/"
+let g:conda_dir="/Users/erikwijmans/miniconda3/"
 let g:python3_host_prog=g:conda_dir."envs/neovim3/bin/python"
 let g:python_host_prog=g:conda_dir."envs/neovim2/bin/python"
 
