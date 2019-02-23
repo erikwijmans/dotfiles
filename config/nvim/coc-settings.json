@@ -7,6 +7,5 @@
         "cacheDirectory": "/tmp/ccls"
       }
     }
-  },
-  "pyls.enable": false,
+  }
 }

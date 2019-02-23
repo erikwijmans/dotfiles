@@ -36,7 +36,7 @@ if !filereadable(expand(g:Vimmic_DEIN).g:file_sep.'README.md')
 
 endif
 
-let g:ale_completion_enabled = 1
+" let g:ale_completion_enabled = 1
 
 "}}}"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin import                                                             {{{
@@ -75,7 +75,7 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('easymotion/vim-easymotion')
     call dein#add('terryma/vim-smooth-scroll')
 
-    call dein#add('Valloric/YouCompleteMe', {'merged': 0})
+    " call dein#add('Valloric/YouCompleteMe', {'merged': 0, 'on_ft': ['python']})
     call dein#add('neoclide/coc.nvim')
     " call dein#add('w0rp/ale')
 
