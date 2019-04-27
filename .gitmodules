@@ -19,6 +19,6 @@
 [submodule "ccls"]
 	path = ccls
 	url = https://github.com/MaskRay/ccls
-[submodule "cquery"]
-	path = cquery
-	url = https://github.com/cquery-project/cquery.git
+[submodule "powerline_fonts"]
+	path = powerline_fonts
+	url = https://github.com/powerline/fonts.git

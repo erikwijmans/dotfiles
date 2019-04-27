@@ -56,13 +56,17 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('Shougo/dein.vim')
 
     " GUI
-    call dein#add('vim-airline/vim-airline')
-    call dein#add('vim-airline/vim-airline-themes')
+    " call dein#add('vim-airline/vim-airline')
+    " call dein#add('vim-airline/vim-airline-themes')
+    call dein#add('liuchengxu/eleline.vim')
+    call dein#add('airblade/vim-gitgutter')
+    call dein#add('tpope/vim-fugitive')
+    call dein#add('tpope/vim-rhubarb')
     call dein#add('scrooloose/nerdtree')
     call dein#add('myusuf3/numbers.vim')
     call dein#add('mbbill/undotree')
-    call dein#add('majutsushi/tagbar')
-    call dein#add('xolox/vim-easytags')
+    " call dein#add('majutsushi/tagbar')
+    " call dein#add('xolox/vim-easytags')
     call dein#add('xolox/vim-misc')
 
     call dein#add('embear/vim-localvimrc')
@@ -77,6 +81,7 @@ if dein#load_state(g:Vimmic_BASE."dein")
 
     " call dein#add('Valloric/YouCompleteMe', {'merged': 0, 'on_ft': ['python']})
     call dein#add('neoclide/coc.nvim')
+    call dein#add('liuchengxu/vista.vim')
     " call dein#add('w0rp/ale')
 
     " Deoplete
