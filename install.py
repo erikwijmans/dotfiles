@@ -8,7 +8,7 @@ ignores = [
     "install.py",
     "ccls",
     "skynet_ssh_config_generator.py",
-    "iterm"
+    "iterm",
 ]
 
 
@@ -21,8 +21,6 @@ class bcolors:
     ENDC = "\033[0m"
     BOLD = "\033[1m"
     UNDERLINE = "\033[4m"
-
-
 
 
 def query_yes_no(question, default="yes"):
