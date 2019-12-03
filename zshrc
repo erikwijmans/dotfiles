@@ -1,3 +1,4 @@
+#
 # User configuration
 . ~/.zsh/init_plugin_manager.zsh
 . ~/.zsh/zsh_aliases
@@ -23,8 +24,8 @@ colors
 # Completion
 ##
 autoload -U compinit
-compinit
 zmodload -i zsh/complist
+compinit
 setopt hash_list_all            # hash everything before completion
 unsetopt completealiases        # do not complete aliases
 setopt always_to_end            # when completing from the middle of a word, move the cursor to the end of the word
@@ -86,18 +87,20 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+
+__conda_dir="/Users/erikwijmans/miniconda3"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/erikwijmans/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('${__conda_dir}/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/erikwijmans/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/erikwijmans/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "${__conda_dir}/etc/profile.d/conda.sh" ]; then
+        . "${__conda_dir}/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/erikwijmans/miniconda3/bin:$PATH"
+        export PATH="${__conda_dir}/bin:$PATH"
     fi
 fi
 unset __conda_setup
+unset __conda_dir
 # <<< conda initialize <<<
-
