@@ -1,0 +1,7 @@
+backend: pgf
+text.usetex: True
+
+pgf.rcfonts: False
+pgf.texsystem: pdflatex
+pgf.preamble: \usepackage{times} \usepackage{amsmath} \usepackage{amssymb} \usepackage{inconsolata} \usepackage{bm}
+# , \usepackage[light]{roboto}, \usepackage[T1]{fontenc}

@@ -1,3 +1,4 @@
+#
 # User configuration
 . ~/.zsh/init_plugin_manager.zsh
 . ~/.zsh/zsh_aliases
@@ -9,6 +10,7 @@ bindkey "^n" history-beginning-search-forward
 
 
 fpath=(~/.zsh/plugins/completions/src $fpath)
+fpath+=~/.zfunc
 
 autoload -U edit-command-line
 zle -N edit-command-line
@@ -22,8 +24,8 @@ colors
 # Completion
 ##
 autoload -U compinit
-compinit
 zmodload -i zsh/complist
+compinit
 setopt hash_list_all            # hash everything before completion
 unsetopt completealiases        # do not complete aliases
 setopt always_to_end            # when completing from the middle of a word, move the cursor to the end of the word
@@ -84,3 +86,19 @@ true
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/private/home/erikwijmans/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/private/home/erikwijmans/miniconda3/etc/profile.d/conda.sh" ]; then
+    else
+        export PATH="/private/home/erikwijmans/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+. "/private/home/erikwijmans/miniconda3/etc/profile.d/conda.sh"
