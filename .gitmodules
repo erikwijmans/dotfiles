@@ -16,9 +16,6 @@
 [submodule "iterm"]
 	path = iterm
 	url = https://github.com/dracula/iterm.git
-[submodule "ccls"]
-	path = ccls
-	url = https://github.com/MaskRay/ccls
 [submodule "powerline_fonts"]
 	path = powerline_fonts
 	url = https://github.com/powerline/fonts.git
