@@ -2,23 +2,9 @@ import os.path as osp
 import os
 import re
 
-skynet_nodes = [
-    "walle",
-    "t1000",
-    "gideon",
-    "jill",
-    "hal",
-    "vicki",
-    "smith",
-    "bender",
-    "tars",
-    "jarvis",
-    "breq",
-    "ash",
-    "eva",
-    "c3po",
-    "johnny5",
-]
+with open("/Users/erikwijmans/skynet-admin/skynet_ansible/hosts.cfg", 'r') as f:
+
+
 GENERATOR_PATTERN = "### SKYNET GENERATOR ###"
 pattern_searcher = re.compile("###\sSKYNET\sGENERATOR\s###$", flags=re.MULTILINE)
 DISCLAIMER = "# Managed by skynet generator, do not modify anything bellow\n"
