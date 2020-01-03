@@ -6,6 +6,7 @@
       "initializationOptions": {
         "cacheDirectory": "/scratch/erikwijmans/ccls-cache"
       }
-    }
-  }
+    },
+  },
+  "pyls.configurationSources": ["pycodestyle"],
 }
