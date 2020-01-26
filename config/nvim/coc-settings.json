@@ -1,10 +1,10 @@
 {
   "languageserver": {
     "ccls": {
-      "command": "/Users/erikwijmans/dotfiles/ccls/Release/ccls",
+      "command": "ccls",
       "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
       "initializationOptions": {
-        "cacheDirectory": "/scratch/erikwijmans/ccls-cache"
+        "cacheDirectory": "/tmp/ccls-cache"
       }
     },
   },
