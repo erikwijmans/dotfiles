@@ -215,4 +215,3 @@ let g:python3_host_prog=g:conda_dir.g:file_sep."envs/neovim3/bin/python"
 let g:python_host_prog=g:conda_dir.g:file_sep."envs/neovim2/bin/python"
 
 set tabstop=4 shiftwidth=4 expandtab smarttab
-
