@@ -1,5 +1,4 @@
 alias grep='grep --color=auto'
-alias ls='ls --color=aut'
 alias cp='cp -v'
 alias mv='mv -v'
 
