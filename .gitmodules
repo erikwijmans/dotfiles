@@ -3,7 +3,7 @@
 	url = https://github.com/Tarrasch/antigen-hs.git
 [submodule "zsh/plugins/completions"]
 	path = zsh/plugins/completions
-	url = git://github.com/zsh-users/zsh-completions.git
+	url = https://github.com/zsh-users/zsh-completions.git
 [submodule "config/nvim/latexindent.pl"]
 	path = config/nvim/latexindent.pl
 	url = https://github.com/cmhughes/latexindent.pl
