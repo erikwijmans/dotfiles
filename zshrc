@@ -1,8 +1,13 @@
 #
 # User configuration
+
+if (( ${+GEOMETRY_PROMPT} )); then
+  unset $(printenv | grep GEOMETRY | cut --delimiter="=" -f1)
+fi
 . ~/.zsh/init_plugin_manager.zsh
 . ~/.zsh/zsh_aliases
 . ~/.zsh/zsh_exports
+
 
 
 bindkey "^p" history-beginning-search-backward
@@ -88,7 +93,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-__conda_dir="/Users/erikwijmans/miniconda3"
+__conda_dir="/private/home/erikwijmans/miniconda3"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('${__conda_dir}/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
