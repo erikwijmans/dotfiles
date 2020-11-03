@@ -10,6 +10,9 @@ conda_env() {
   fi
 }
 
+export GEOMETRY_STATUS_COLOR=$(geometry::hostcolor)
+export GEOMETRY_STATUS_COLOR_ERROR=$(geometry::hostcolor)
+
 GEOMETRY_PROMPT=(geometry_newline ${GEOMETRY_PROMPT[@]} slurm_job)
 GEOMETRY_RPROMPT+=(conda_env)
 

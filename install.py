@@ -72,7 +72,7 @@ def attemp_link(src, dst):
 
     if are_same:
         print("Already exists")
-    elif not os.path.exists(dst):
+    elif not os.path.islink(dst):
         print("Linking")
         os.symlink(src, dst)
     else:
