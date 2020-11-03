@@ -98,10 +98,10 @@ function! s:tags()
   \ 'sink':    function('s:tags_sink')})
 endfunction
 
-command! Tags call s:tags()
+" command! Tags call s:tags()
 
 nmap <Leader>g :Files<Cr>
 nmap <Leader>G :Ag<Cr>
-nmap <Leader>R :Tags<Cr>
-nmap <Leader>r :BTags<Cr>
+" nmap <Leader>R :Tags<Cr>
+" nmap <Leader>r :BTags<Cr>
 nmap <Leader>B :Buffers<Cr>

@@ -36,6 +36,8 @@ if !filereadable(expand(g:Vimmic_DEIN).g:file_sep.'README.md')
 
 endif
 
+" let g:ale_completion_enabled = 1
+
 "}}}"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin import                                                             {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -54,13 +56,17 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('Shougo/dein.vim')
 
     " GUI
-    call dein#add('vim-airline/vim-airline')
-    call dein#add('vim-airline/vim-airline-themes')
+    " call dein#add('vim-airline/vim-airline')
+    " call dein#add('vim-airline/vim-airline-themes')
+    call dein#add('liuchengxu/eleline.vim')
+    call dein#add('airblade/vim-gitgutter')
+    call dein#add('tpope/vim-fugitive')
+    call dein#add('tpope/vim-rhubarb')
     call dein#add('scrooloose/nerdtree')
     call dein#add('myusuf3/numbers.vim')
     call dein#add('mbbill/undotree')
-    call dein#add('majutsushi/tagbar')
-    call dein#add('xolox/vim-easytags')
+    " call dein#add('majutsushi/tagbar')
+    " call dein#add('xolox/vim-easytags')
     call dein#add('xolox/vim-misc')
 
     call dein#add('embear/vim-localvimrc')
@@ -70,10 +76,15 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('tpope/vim-sleuth')
     call dein#add('scrooloose/nerdcommenter')
     call dein#add('Raimondi/delimitMate')
-    call dein#add('easymotion/vim-easymotion')
+    " call dein#add('easymotion/vim-easymotion')
     call dein#add('terryma/vim-smooth-scroll')
+    call dein#add('justinmk/vim-sneak')
 
-    call dein#add('Valloric/YouCompleteMe', {'merged': 0})
+    " call dein#add('Valloric/YouCompleteMe', {'merged': 0, 'on_ft': ['python']})
+    call dein#add('neoclide/coc.nvim', {'rev': 'release'})
+    call dein#add('liuchengxu/vista.vim')
+    " call dein#add('w0rp/ale')
+
     " Deoplete
     " call dein#add('Shougo/deoplete.nvim')
     " call dein#add('Shougo/deol.nvim')
@@ -105,7 +116,8 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('nvie/vim-flake8')
     " call dein#add('hdima/python-syntax')
     call dein#add('kh3phr3n/python-syntax')
-    call dein#add('mindriot101/vim-yapf')
+    " call dein#add('mindriot101/vim-yapf')
+    call dein#add('psf/black', { 'rev': 'ce14fa8b497bae2b50ec48b3bd7022573a59cdb1' })
 
     " TS
     call dein#add('leafgarland/typescript-vim')
@@ -124,6 +136,7 @@ if dein#load_state(g:Vimmic_BASE."dein")
     " Theme
     call dein#add('mhartington/oceanic-next')
     call dein#add('rafi/awesome-vim-colorschemes')
+    call dein#add('dracula/vim')
 
     " CMake
     call dein#add('pboettch/vim-cmake-syntax')
@@ -150,7 +163,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-  au BufWritePre * %s/\s\+$//e " Trim trailing whitespace
+  " au BufWritePre * %s/\s\+$//e " Trim trailing whitespace
   au FocusLost * silent! wa " Save on focus loss
   au InsertLeave * silent! set notimeout <bar> set ttimeout
   au InsertEnter * silent! set timeout <bar> set nottimeout
@@ -188,8 +201,9 @@ endif
 
 " Theme
 syntax enable
-set background=dark
-colorscheme solarized8
+" set background=dark
+" colorscheme solarized8
+colorscheme dracula
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
@@ -201,4 +215,3 @@ let g:python3_host_prog=g:miniconda_path.g:file_sep."envs/neovim3/bin/python"
 let g:python_host_prog=g:miniconda_path.g:file_sep."envs/neovim2/bin/python"
 
 set tabstop=4 shiftwidth=4 expandtab smarttab
-

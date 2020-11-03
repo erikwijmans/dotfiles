@@ -13,3 +13,9 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "iterm"]
+	path = iterm
+	url = https://github.com/dracula/iterm.git
+[submodule "powerline_fonts"]
+	path = powerline_fonts
+	url = https://github.com/powerline/fonts.git

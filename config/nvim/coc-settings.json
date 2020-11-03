@@ -1,0 +1,14 @@
+{
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+      "initializationOptions": {
+        "cache": {
+           "directory": "/tmp/ccls"
+         }
+      }
+    },
+  },
+  "pyls.configurationSources": ["pycodestyle"],
+}

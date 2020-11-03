@@ -1,6 +1,8 @@
 alias grep='grep --color=auto'
 alias cp='cp -v'
 alias mv='mv -v'
+alias git-conflicts='git diff --name-only | uniq | xargs $EDITOR'
+alias git-add-conflicts='git diff --name-only | uniq | xargs git add'
 
 addpath () {
     if [[ -d "$1" ]] &&  [[ ":$PATH:" != *":$1:"* ]]
