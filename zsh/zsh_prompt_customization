@@ -1,24 +1,15 @@
-string_hash_color() {
-  colors=(2 3 4 6 5 9 12 14)
-
-  if (($(echotc Co) == 256)); then
-    colors+=(99 155 47 26)
+slurm_job() {
+  if (( ${+SLURM_JOB_ID} )); then
+    echo "%F{default}(Job: ${SLURM_JOB_ID})%f% "
   fi
-
-  HASHSTR=$1
-  HASHSIZE=${#colors}
-
-  HASHVAL=0
-
-  for i in {1..${#HASHSTR}}; do;
-    THISCHAR=$HASHSTR[$i]
-    HASHVAL=$(( (31*$HASHVAL + $((#THISCHAR))) % 2048 ))
-  done
-
-  HASHVAL=$(( $HASHVAL % $HASHSIZE ))
-
-  echo ${colors[$(($HASHVAL + 1))]}
 }
 
-export GEOMETRY_COLOR_PROMPT=$(string_hash_color $HOST)
-export GEOMETRY_PROMPT=$(prompt_geometry_colorize $GEOMETRY_COLOR_PROMPT $GEOMETRY_SYMBOL_PROMPT)
+conda_env() {
+  if (( ${+CONDA_PROMPT_MODIFIER} )); then
+    echo "%F{default}${CONDA_PROMPT_MODIFIER}%f% "
+  fi
+}
+
+GEOMETRY_PROMPT=(geometry_newline ${GEOMETRY_PROMPT[@]} slurm_job)
+GEOMETRY_RPROMPT+=(conda_env)
+

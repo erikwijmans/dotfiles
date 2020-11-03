@@ -1,7 +1,12 @@
 # User configuration
+
+if (( ${+GEOMETRY_PROMPT} )); then
+  unset $(printenv | grep GEOMETRY | cut --delimiter="=" -f1)
+fi
 . ~/.zsh/init_plugin_manager.zsh
 . ~/.zsh/zsh_aliases
 . ~/.zsh/zsh_exports
+
 
 
 bindkey "^p" history-beginning-search-backward
@@ -83,7 +88,11 @@ true
 
 
 
+<<<<<<< HEAD
 __conda_dir="${HOME}/miniconda3"
+=======
+__conda_dir="/private/home/erikwijmans/miniconda3"
+>>>>>>> 9f15efefecd0609c52cf29a1eca21102428f1f4e
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('${__conda_dir}/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
