@@ -6,9 +6,12 @@ slurm_job() {
 
 conda_env() {
   if (( ${+CONDA_PROMPT_MODIFIER} )); then
-    echo "%F{default}${+CONDA_PROMPT_MODIFIER}%f% "
+    echo "%F{default}${CONDA_PROMPT_MODIFIER}%f% "
   fi
 }
 
-GEOMETRY_PROMPT=(${GEOMETRY_PROMPT[@]} slurm_job)
+newline() { echo "\n" }
+
+GEOMETRY_PROMPT=(geometry_newline ${GEOMETRY_PROMPT[@]} slurm_job)
 GEOMETRY_RPROMPT+=(conda_env)
+
