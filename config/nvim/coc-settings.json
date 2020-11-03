@@ -4,9 +4,11 @@
       "command": "ccls",
       "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
       "initializationOptions": {
-        "cacheDirectory": "/tmp/ccls-cache"
+        "cache": {
+          "directory": "/scratch/erikwijmans/ccls-cache"
+        }
       }
-    },
+    }
   },
-  "pyls.configurationSources": ["pycodestyle"],
+  "pyls.configurationSources": ["pycodestyle"]
 }

@@ -117,7 +117,7 @@ if dein#load_state(g:Vimmic_BASE."dein")
     " call dein#add('hdima/python-syntax')
     call dein#add('kh3phr3n/python-syntax')
     " call dein#add('mindriot101/vim-yapf')
-    call dein#add('ambv/black')
+    call dein#add('psf/black', { 'rev': '19.10b0' })
 
     " TS
     call dein#add('leafgarland/typescript-vim')
@@ -210,7 +210,7 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let python_highlight_all = 1
 
 
-let g:conda_dir="/Users/erikwijmans/miniconda3"
+let g:conda_dir="/private/home/erikwijmans/miniconda3"
 let g:python3_host_prog=g:conda_dir.g:file_sep."envs/neovim3/bin/python"
 let g:python_host_prog=g:conda_dir.g:file_sep."envs/neovim2/bin/python"
 
