@@ -1,4 +1,3 @@
-#
 # User configuration
 
 if (( ${+GEOMETRY_PROMPT} )); then
@@ -88,12 +87,8 @@ setopt share_history # share command history data
 true
 
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
-__conda_dir="/private/home/erikwijmans/miniconda3"
+__conda_dir="${HOME}/miniconda3"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('${__conda_dir}/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -109,3 +104,4 @@ fi
 unset __conda_setup
 unset __conda_dir
 # <<< conda initialize <<<
+#

@@ -5,8 +5,8 @@
       "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
       "initializationOptions": {
         "cache": {
-          "directory": "/scratch/erikwijmans/ccls-cache"
-        }
+           "directory": "/tmp/ccls"
+         }
       }
     }
   },
