@@ -210,14 +210,8 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let python_highlight_all = 1
 
 
-<<<<<<< HEAD
-let g:conda_dir="/private/home/erikwijmans/miniconda3"
+let g:conda_dir="$HOME/miniconda3"
 let g:python3_host_prog=g:conda_dir.g:file_sep."envs/neovim3/bin/python"
 let g:python_host_prog=g:conda_dir.g:file_sep."envs/neovim2/bin/python"
-=======
-let g:miniconda_path="/nethome/ewijmans3/miniconda3"
-let g:python3_host_prog=g:miniconda_path.g:file_sep."envs/neovim3/bin/python"
-let g:python_host_prog=g:miniconda_path.g:file_sep."envs/neovim2/bin/python"
->>>>>>> 05df5fd3b3c4e408668488810e2f29cc8775cdb9
 
 set tabstop=4 shiftwidth=4 expandtab smarttab
