@@ -55,6 +55,8 @@ if dein#load_state(g:Vimmic_BASE."dein")
     " Let dein manage dein
     call dein#add('Shougo/dein.vim')
 
+    call dein#add('tpope/vim-sensible')
+
     " GUI
     " call dein#add('vim-airline/vim-airline')
     " call dein#add('vim-airline/vim-airline-themes')
@@ -170,7 +172,6 @@ if has("autocmd")
 endif
 set autowrite " Save on buffer switch
 set notimeout
-set ttimeout
 
 " Leader key
 if !exists("mapleader")
