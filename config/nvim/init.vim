@@ -36,6 +36,8 @@ if !filereadable(expand(g:Vimmic_DEIN).g:file_sep.'README.md')
 
 endif
 
+let g:black_virtualenv = g:Vimmic_BASE."black"
+
 " let g:ale_completion_enabled = 1
 
 "}}}"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -100,7 +102,9 @@ if dein#load_state(g:Vimmic_BASE."dein")
     " call dein#add('zchee/deoplete-jedi')
     " call dein#add('tweekmonster/deoplete-clang2')
     " Neomake
-    call dein#add('neomake/neomake')
+    if has('nvim')
+      call dein#add('neomake/neomake')
+    endif
 
     " lib needed by nerdtree & others
     call dein#add('tomtom/tlib_vim')
@@ -136,7 +140,7 @@ if dein#load_state(g:Vimmic_BASE."dein")
     " Theme
     call dein#add('mhartington/oceanic-next')
     call dein#add('rafi/awesome-vim-colorschemes')
-    call dein#add('dracula/vim')
+    call dein#add('dracula/vim', { 'name': 'dracula' })
 
     " CMake
     call dein#add('pboettch/vim-cmake-syntax')
@@ -201,11 +205,15 @@ endif
 
 " Theme
 syntax enable
-" set background=dark
 " colorscheme solarized8
 colorscheme dracula
+set t_Co=256
+" set background=dark
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+call mkdir($HOME . "/.local/share/vim/swap", "p", 0700)
+set directory^=$HOME/.local/share/vim/swap//
 
 let python_highlight_all = 1
 
@@ -215,3 +223,7 @@ let g:python3_host_prog=g:conda_dir.g:file_sep."envs/neovim3/bin/python"
 let g:python_host_prog=g:conda_dir.g:file_sep."envs/neovim2/bin/python"
 
 set tabstop=4 shiftwidth=4 expandtab smarttab
+
+if !has('nvim')
+  set is hls
+endif

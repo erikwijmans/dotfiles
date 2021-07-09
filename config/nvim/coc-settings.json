@@ -5,7 +5,7 @@
       "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
       "initializationOptions": {
         "cache": {
-           "directory": "/tmp/ccls"
+           "directory": "/raid/erikwijmans/ccls"
          }
       }
     }
