@@ -1,4 +1,4 @@
-export EDITOR=vim
+export EDITOR=nvim
 export NINJA_STATUS="[%u/%r/%t %p :: %c] "
 
 local_exports="${HOME}/.zsh/zsh_exports.local"

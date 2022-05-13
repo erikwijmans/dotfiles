@@ -123,14 +123,14 @@ if dein#load_state(g:Vimmic_BASE."dein")
     " call dein#add('hdima/python-syntax')
     call dein#add('kh3phr3n/python-syntax')
     " call dein#add('mindriot101/vim-yapf')
-    call dein#add('psf/black', { 'rev': 'ce14fa8b497bae2b50ec48b3bd7022573a59cdb1' })
+    call dein#add('psf/black', { 'rev': 'v22.1.0' })
 
     " TS
     call dein#add('leafgarland/typescript-vim')
 
     " Latex
-    " call dein#add('lervag/vimtex', {'on_ft':"tex"})
-    call dein#add('donRaphaco/neotex', {'on_ft': "tex"})
+    call dein#add('lervag/vimtex', {'on_ft':'tex'})
+    call dein#add('donRaphaco/neotex', {'on_ft': 'tex'})
     " Markdown
     call dein#add('godlygeek/tabular')
     call dein#add('plasticboy/vim-markdown', {'on_ft':["markdown"]})
@@ -140,12 +140,12 @@ if dein#load_state(g:Vimmic_BASE."dein")
     call dein#add('junegunn/fzf.vim')
 
     " Theme
-    call dein#add('mhartington/oceanic-next')
-    call dein#add('rafi/awesome-vim-colorschemes')
+    " call dein#add('mhartington/oceanic-next')
+    " call dein#add('rafi/awesome-vim-colorschemes')
     call dein#add('dracula/vim', { 'name': 'dracula' })
 
     " CMake
-    call dein#add('pboettch/vim-cmake-syntax')
+    " call dein#add('pboettch/vim-cmake-syntax')
 
     call dein#end()
     call dein#save_state()
@@ -153,6 +153,8 @@ endif
 
 " Required:
 filetype plugin indent on
+
+set formatoptions-=t
 
 
 " If you want to install not installed plugins on startup.
@@ -170,7 +172,7 @@ endif
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   " au BufWritePre * %s/\s\+$//e " Trim trailing whitespace
-  au FocusLost * silent! wa " Save on focus loss
+  " au FocusLost * silent! wa " Save on focus loss
   au InsertLeave * silent! set notimeout <bar> set ttimeout
   au InsertEnter * silent! set timeout <bar> set nottimeout
 endif
@@ -224,6 +226,7 @@ let g:python3_host_prog=g:conda_dir.g:file_sep."envs/neovim3/bin/python"
 let g:python_host_prog=g:conda_dir.g:file_sep."envs/neovim2/bin/python"
 
 set tabstop=4 shiftwidth=4 expandtab smarttab
+set hid
 
 if !has('nvim')
   set is hls
