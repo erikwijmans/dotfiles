@@ -9,8 +9,11 @@ fi
 
 
 
-bindkey "^p" history-beginning-search-backward
-bindkey "^n" history-beginning-search-forward
+bindkey "^p" history-substring-search-up
+#history-beginning-search-backward
+bindkey "^n" history-substring-search-down
+#history-beginning-search-forward
+HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 
 fpath=(~/.zsh/plugins/completions/src $fpath)
