@@ -108,3 +108,9 @@ unset __conda_setup
 unset __conda_dir
 # <<< conda initialize <<<
 #
+
+if [ -n "$SSH_AUTH_SOCK" ] && [ "$SSH_AUTH_SOCK" != "$HOME/.ssh/auth_sock" ] && [[ "$SSH_AUTH_SOCK" == *et_forward_sock* ]]; then
+      ln -sf "$SSH_AUTH_SOCK" "$HOME/.ssh/auth_sock"
+      export SSH_AUTH_SOCK="$HOME/.ssh/auth_sock"
+fi
+
